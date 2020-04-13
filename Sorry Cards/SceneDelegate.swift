@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import AVFoundation
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -19,8 +20,44 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
+        var deck = [String]()
+        let values =  ["One", "Two", "Three", "Four", "Five", "Seven", "Eight", "Ten", "Eleven", "Twelve", "Sorry"]
+        for value in values {
+            var i = 4
+            if value == "One" { i = 5 }
+            while i > 0 {
+                deck.append(value)
+                  i -= 1
+            }
+        }
+        deck.shuffle()
+        var shuffleSound: AVAudioPlayer?
+        let path = Bundle.main.path(forResource: "Shuffle.mp3", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+        //let url = Bundle.main.url(forResource: "Shuffle", withExtension: "mp3")
+
+        do {
+            shuffleSound = try AVAudioPlayer(contentsOf: url)
+            shuffleSound?.play()
+        } catch {
+            // couldn't load file :(
+        }
+        
+        var cardFlip: AVAudioPlayer?
+        let path2 = Bundle.main.path(forResource: "Flip.mp3", ofType:nil)!
+        let url2 = URL(fileURLWithPath: path2)
+        //let url = Bundle.main.url(forResource: "Shuffle", withExtension: "mp3")
+
+        do {
+            cardFlip = try AVAudioPlayer(contentsOf: url2)
+
+        } catch {
+            // couldn't load file :(
+        }
+        
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+        let contentView = ContentView(deck: deck, shuffleSound: shuffleSound ?? AVAudioPlayer(), cardFlip: cardFlip ?? AVAudioPlayer() )
+        
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

@@ -13,6 +13,8 @@
 		25B652812443D9EE009DBFAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B652802443D9EE009DBFAE /* Assets.xcassets */; };
 		25B652842443D9EE009DBFAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B652832443D9EE009DBFAE /* Preview Assets.xcassets */; };
 		25B652872443D9EE009DBFAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B652852443D9EE009DBFAE /* LaunchScreen.storyboard */; };
+		25B652AF24441263009DBFAE /* Shuffle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25B652AE24441263009DBFAE /* Shuffle.mp3 */; };
+		25B652B324441718009DBFAE /* Flip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25B652B224441718009DBFAE /* Flip.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		25B652832443D9EE009DBFAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		25B652862443D9EE009DBFAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25B652882443D9EE009DBFAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25B652AE24441263009DBFAE /* Shuffle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Shuffle.mp3; sourceTree = "<group>"; };
+		25B652B224441718009DBFAE /* Flip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Flip.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				25B6527C2443D9EB009DBFAE /* SceneDelegate.swift */,
 				25B6527E2443D9EB009DBFAE /* ContentView.swift */,
 				25B652802443D9EE009DBFAE /* Assets.xcassets */,
+				25B652AE24441263009DBFAE /* Shuffle.mp3 */,
+				25B652B224441718009DBFAE /* Flip.mp3 */,
 				25B652852443D9EE009DBFAE /* LaunchScreen.storyboard */,
 				25B652882443D9EE009DBFAE /* Info.plist */,
 				25B652822443D9EE009DBFAE /* Preview Content */,
@@ -135,6 +141,8 @@
 			files = (
 				25B652872443D9EE009DBFAE /* LaunchScreen.storyboard in Resources */,
 				25B652842443D9EE009DBFAE /* Preview Assets.xcassets in Resources */,
+				25B652B324441718009DBFAE /* Flip.mp3 in Resources */,
+				25B652AF24441263009DBFAE /* Shuffle.mp3 in Resources */,
 				25B652812443D9EE009DBFAE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +297,7 @@
 				DEVELOPMENT_TEAM = 2K7YW5WLQ2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Sorry Cards/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +318,7 @@
 				DEVELOPMENT_TEAM = 2K7YW5WLQ2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Sorry Cards/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
